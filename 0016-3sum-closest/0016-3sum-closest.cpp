@@ -14,7 +14,7 @@ public:
                     maxtemp=temp;
                     ans = sum;
                 }
-                 if(sum>target){
+                 else if(sum>target){
                     z--;
                 }
                 else{
