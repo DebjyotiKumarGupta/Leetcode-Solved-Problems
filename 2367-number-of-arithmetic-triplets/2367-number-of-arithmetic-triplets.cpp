@@ -7,7 +7,7 @@ public:
         s.insert(nums[i]);
     }
         for(auto &k:s){
-            if(s.find(k-diff)!=s.end() && s.find(k+diff)!=s.end()){
+            if(s.find(diff+k)!=s.end() && s.find(2*diff+k)!=s.end()){
                 curr++;
             }
         }
