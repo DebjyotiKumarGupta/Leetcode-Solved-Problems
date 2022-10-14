@@ -13,7 +13,7 @@ class Solution {
             }
                N=N>>1;
         }
-        return res;
+        return res+(N&1);
     }
 };
 
