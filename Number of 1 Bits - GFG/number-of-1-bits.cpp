@@ -8,12 +8,10 @@ class Solution {
     int setBits(int N) {
         int res=0;
         while(N>0){
-            if(N&1 == 1){
-               res++;
-            }
-               N=N>>1;
+           N=N&(N-1);
+           res++;
         }
-        return res+(N&1);
+        return res;
     }
 };
 
