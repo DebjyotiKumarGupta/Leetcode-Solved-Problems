@@ -14,17 +14,14 @@ public:
         if(head==NULL || head->next==NULL) return head;
          ListNode *first=head;   
         ListNode *second=head->next;
-        // swap(first->val,second->val);
         while(second!=NULL && second->next!=NULL){
             swap(first->val,second->val);
             first=first->next->next;
             second=second->next->next;
-             // swap(first->val,second->val);
         }
         if(second!=NULL){
             swap(first->val,second->val);
         }
-        // swap(first->val,second->val);
         return head;
 
     }
