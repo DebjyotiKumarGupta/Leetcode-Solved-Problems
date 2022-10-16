@@ -23,9 +23,7 @@ public:
             p=p->next;
             res=res->next;
         }
-        int temp = curr->val;
-        curr->val=res->val;
-        res->val=temp;
+       swap(curr->val,res->val);
         return head;
         
         
