@@ -5,7 +5,6 @@ public:
         for(int i=0;i<nums.size();i++){
             if(count){
                 count+=(nums[i]==nums[res]? 1 : -1);
-                cout<<count<<" ";
             }
             else{
                 res = i;
