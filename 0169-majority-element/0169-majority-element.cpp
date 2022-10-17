@@ -12,13 +12,7 @@ public:
                 count =1;
             }
         }
-        cout<<nums[res]<<" "<<count;
-        count =0;
-              for(int i=0;i<nums.size();i++)
-              {
-                  if(nums[i]==nums[res]) count++;
-              }
-        if(count<=nums.size()/2) return -1;
+    
         return nums[res];
         
     }
