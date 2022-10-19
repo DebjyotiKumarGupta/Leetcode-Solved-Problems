@@ -4,10 +4,8 @@ public:
         int x = num;
         int sum =0;
         while((num/10)>0){
-            cout<<num<<" ";
             while(x!=0){
-                int rem = x%10;
-                sum = sum + rem;
+                sum += (x%10);
                 x/=10;
             }
             num = sum;
