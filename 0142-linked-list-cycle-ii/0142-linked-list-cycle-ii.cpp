@@ -15,7 +15,7 @@ public:
             slow = slow->next;
             if(slow==fast) break;
         }
-        if(slow!=fast || fast==NULL || fast->next==NULL) return NULL;
+        if(fast==NULL || fast->next==NULL) return NULL;
         while(slow != head){
             slow=slow->next;
             head = head->next;
