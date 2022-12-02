@@ -1,26 +1,21 @@
 class Solution {
 public:
-    int maximumSwap(int x) {
-        int num=x;
-        vector<int> v;
-        while(num!=0){
-            v.push_back(num%10);
-            num=num/10;
-        }
-        
-        reverse(v.begin(),v.end());
-        for(int i=0;i<v.size();i++){
-            for(int j=i+1;j<v.size();j++){
-                swap(v[i],v[j]);
-                int ans=0;
-                for(int k=0;k<v.size();k++){
-                    ans = ans*10+v[k];
-                }
-                x = max(x,ans);
-                swap(v[i],v[j]);
+    int maximumSwap(int num) {
+        string s1 = to_string(num);
+        string s2 = s1;
+        int mx=0,p=0,c=0;
+        sort(s1.begin(),s1.end(),greater<int>());
+        for(int i=0;i<s1.length();i++){
+            if(s1[i]!=s2[i] && c==0){
+                p=i;
+                c=1;
+                mx=i;
+            }
+            if(s2[i]>=s2[mx] && c==1){
+                mx=i;
             }
         }
-        return x;
-        
+        swap(s2[p],s2[mx]);
+        return stoi(s2);
     }
 };
