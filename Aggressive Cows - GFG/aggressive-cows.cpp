@@ -23,7 +23,7 @@ public:
 
     int solve(int n, int k, vector<int> &stalls) {
        sort(stalls.begin(),stalls.end());
-       int j= stalls[n-1]-stalls[0],i=1;
+       int j= stalls[n-1],i=1;
        while(i<=j){
            int mid = (i+j)/2;
            if(placed(stalls,n,k,mid))
